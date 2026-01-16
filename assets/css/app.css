@@ -1203,6 +1203,10 @@ body {
   overscroll-behavior-x: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   color: var(--txt);
@@ -1250,11 +1254,6 @@ h3,
   padding: clamp(1.25rem, 3vw, 2rem);
 }
 
-.max-w-7xl {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 /* Glass Effect */
 
 .glass {
@@ -1270,7 +1269,7 @@ h3,
   background: var(--acc);
   color: var(--ink);
   font-weight: 700;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   box-shadow: 4px 4px 0 var(--shadow);
   border: 2px solid var(--ink);
   cursor: pointer;
@@ -1279,10 +1278,21 @@ h3,
 .btn:hover {
   background: var(--pri);
   box-shadow: 2px 2px 0 var(--shadow);
+  transform: translateY(-1px);
 }
 
 .btn:active {
   box-shadow: 1px 1px 0 var(--shadow);
+}
+
+.btn-unified {
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-unified:hover {
+  background: var(--pri);
+  box-shadow: 2px 2px 0 var(--shadow);
+  transform: translateY(-1px);
 }
 
 /* Tilt Effect */
@@ -1301,20 +1311,6 @@ h3,
   transform: none;
 }
 
-/* Responsive Grid */
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.sm\:grid-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.lg\:grid-cols-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
 
 /* Project Cards */
 
@@ -1354,7 +1350,7 @@ h3,
 
 /* Orbiting rings behind hero */
 
-.ring {
+.hero-ring {
   position: absolute;
   inset: -120px;
   background:
@@ -1590,17 +1586,23 @@ h3,
     linear-gradient(135deg, #fff7ea, #edf8f5);
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-  .sm\:grid-cols-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: 1fr;
-  }
+.hamburger-line {
+  display: block;
+  width: 1.5rem;
+  height: 0.125rem;
+  background: #111;
+  border-radius: 999px;
 }
+
+.hamburger-line + .hamburger-line {
+  margin-top: 0.25rem;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* Responsive */
 
 @media (max-width: 640px) {
   .stats-grid {
@@ -1737,3 +1739,8 @@ h3,
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
