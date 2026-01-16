@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="noise">
+  <!-- Floating decorative blobs -->
+  <div class="blob blob-primary pointer-events-none fixed -top-20 -left-10 w-[480px] h-[480px] rounded-full"></div>
+  <div class="blob blob2 blob-accent pointer-events-none fixed bottom-[-80px] right-[-60px] w-[520px] h-[520px] rounded-full"></div>
+
+  <!-- NAV -->
+  <header class="container-pad sticky top-0 z-40">
+    <nav class="max-w-7xl w-full py-4">
+      <div class="glass rounded-2xl px-4 md:px-6 py-3 flex items-center gap-6 w-full">
+        <a href="#" class="flex items-center gap-3 no-underline">
+          <span class="logo-badge inline-flex h-9 w-9 rounded-xl items-center justify-center">P</span>
+          <span class="font-semibold tracking-tight">Portofolio</span>
+        </a>
+        <div class="hidden md:flex items-center gap-2 md:ml-auto justify-end">
+          <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Tentang</a>
+          <a href="#projects" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Proyek</a>
+          <a href="#skills" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Keahlian</a>
+          <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Kontak</a>
+        </div>
+        <div class="ml-auto md:ml-0 flex items-center gap-2">
+          <button id="mobileMenuBtn" class="md:hidden rounded-xl px-3 py-2 border border-white/15 hover:bg-white/10 transition" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+            <span class="block w-6 h-0.5 bg-white/80 mb-1"></span>
+            <span class="block w-6 h-0.5 bg-white/80 mb-1"></span>
+            <span class="block w-6 h-0.5 bg-white/80"></span>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden mt-3 glass rounded-2xl p-3">
+        <div class="flex flex-col gap-1">
+          <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Tentang</a>
+          <a href="#projects" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Proyek</a>
+          <a href="#skills" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Keahlian</a>
+          <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Kontak</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative container-pad">
+    <div class="ring -z-10"></div>
+    <div class="section-frame mx-auto max-w-7xl grid md:grid-cols-2 gap-10 items-center py-14 md:py-20">
+      <div class="flex flex-col gap-6">
+        <div class="inline-flex w-fit tag px-3 py-1 rounded-full text-[12px] text-indigo-200/80">Portofolio kreatif & profesional</div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Halo, saya <br> <span class="text-gradient">Desainer & Developer</span>
+        </h1>
+        <p class="text-[15px] md:text-base text-[color:var(--mut)] max-w-xl">
+          Saya membantu brand dan bisnis membangun website yang cepat, modern, dan mudah dipakai.
+        </p>
+        <div class="flex gap-3">
+          <a href="#projects" class="btn rounded-xl px-5 py-3">Lihat Proyek</a>
+          <a href="#contact" class="rounded-xl px-5 py-3 border border-white/15 hover:bg-white/10 transition">Hubungi Saya</a>
+        </div>
+        <!-- Stats -->
+        <div class="stats-grid grid grid-cols-3 gap-4 pt-4">
+          <div class="glass rounded-2xl px-4 py-3 text-center">
+            <div class="text-2xl font-extrabold">5+</div>
+            <div class="text-[12px] text-[color:var(--mut)]">Tahun Pengalaman</div>
+          </div>
+          <div class="glass rounded-2xl px-4 py-3 text-center">
+            <div class="text-2xl font-extrabold">30+</div>
+            <div class="text-[12px] text-[color:var(--mut)]">Proyek Selesai</div>
+          </div>
+          <div class="glass rounded-2xl px-4 py-3 text-center">
+            <div class="text-2xl font-extrabold">12</div>
+            <div class="text-[12px] text-[color:var(--mut)]">Klien Aktif</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D CARD PLAYGROUND -->
+      <div class="relative">
+        <div class="tilt glass rounded-3xl p-6 md:p-8 overflow-hidden relative group hero-frame" id="tiltCard">
+          <span class="tilt-glow absolute inset-0 opacity-30 pointer-events-none"></span>
+          <!-- <div class="absolute top-4 right-4 text-xs text-[color:var(--mut)]">Kartu 3D Interaktif</div> -->
+
+          <div class="relative grid grid-cols-3 gap-4">
+            <div class="col-span-2">
+              <h3 class="text-2xl font-bold pop"></h3>
+              <!-- <p class="mt-2 text-[13px] text-[color:var(--mut)] pop">
+                Gerakkan kursor untuk melihat efek kedalaman. Klik "Putar" untuk animasi orbit.
+              </p> -->
+            </div>
+            <div class="flex items-start justify-end"></div>
+          </div>
+
+          <div class="relative mt-6 media-avatar">
+            <img src="/assets/IMG/images.jpg" alt="Foto profil" class="media-avatar-img">
+            <!-- <div id="originalScene" class="absolute inset-0"> -->
+              <!-- planet -->
+              <!-- <div class="pop absolute left-6 top-6 h-28 w-28 rounded-full" style="background: radial-gradient(circle at 30% 30%, #bfe7ff 0%, #7dd3fc 40%, #5ec2f1 70%, #3aa6e1 100%); box-shadow: inset -14px -16px 40px rgba(0,0,0,.25), 0 20px 60px rgba(61,178,234,.35)"></div> -->
+              <!-- ring -->
+              <!-- <div class="pop absolute left-2 top-16 h-14 w-40 rounded-full" style="border:4px solid rgba(255,255,255,.25); transform: rotate(-18deg); box-shadow: 0 10px 30px rgba(0,0,0,.25);"></div> -->
+              <!-- pyramid -->
+              <!-- <div class="pop absolute right-8 bottom-8 w-0 h-0" -->
+                   <!-- style="border-left:40px solid transparent;border-right:40px solid transparent;border-bottom:70px solid #a78bfa; filter: drop-shadow(0 18px 35px rgba(167,139,250,.35));"></div> -->
+              <!-- ground -->
+              <!-- <div class="absolute inset-x-0 bottom-0 h-20 rounded-2xl" style="background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08)"></div> -->
+            <!-- </div> -->
+            
+            <!-- shine swipe -->
+            <div class="shine"></div>
+          </div>
+
+          <!-- badges -->
+          <div class="mt-5 flex flex-wrap gap-2 hero-tags">
+            <span class="text-[11px] px-2 py-1 rounded-full tag">UI/UX</span>
+            <span class="text-[11px] px-2 py-1 rounded-full tag">Web Design</span>
+            <span class="text-[11px] px-2 py-1 rounded-full tag">Frontend</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container-pad py-14 md:py-20">
+    <div class="section-frame mx-auto max-w-7xl grid md:grid-cols-5 gap-8 items-center">
+      <div class="md:col-span-2">
+        <div class="glass rounded-3xl p-6 md:p-8 tilt" id="aboutCard">
+          <h2 class="text-3xl font-bold mb-2 pop">Tentang Saya</h2>
+          <p class="text-[15px] text-[color:var(--mut)] leading-relaxed pop">
+            Saya fokus pada desain yang bersih dan pengalaman pengguna yang nyaman, dari konsep hingga implementasi.
+          </p>
+          <div class="mt-5 flex gap-3">
+            <a href="#contact" class="btn px-4 py-2 rounded-xl">Kontak</a>
+            <a href="#projects" class="rounded-xl px-4 py-2 border border-white/15 hover:bg-white/10 transition">Lihat Proyek</a>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-3 grid sm:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-5 tilt">
+          <h3 class="font-semibold pop">Strategi Produk</h3>
+          <p class="text-[13px] text-[color:var(--mut)] mt-2 pop">Riset, wireframe, dan validasi kebutuhan pengguna.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 tilt">
+          <h3 class="font-semibold pop">UI Design</h3>
+          <p class="text-[13px] text-[color:var(--mut)] mt-2 pop">Layout rapi, tipografi kuat, dan komponen konsisten.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 tilt">
+          <h3 class="font-semibold pop">Frontend Dev</h3>
+          <p class="text-[13px] text-[color:var(--mut)] mt-2 pop">Implementasi cepat, responsif, dan performa tinggi.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 tilt">
+          <h3 class="font-semibold pop">Kolaborasi</h3>
+          <p class="text-[13px] text-[color:var(--mut)] mt-2 pop">Komunikasi jelas dan progres terukur tiap minggu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container-pad py-14 md:py-20">
+    <div class="section-frame mx-auto max-w-7xl">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Proyek Terbaru</h2>
+        <div class="flex gap-2">
+          <button id="gridBtn" class="rounded-xl px-4 py-2 border border-white/15 hover:bg-white/10 transition">Grid</button>
+          <button id="masonryBtn" class="rounded-xl px-4 py-2 border border-white/15 hover:bg-white/10 transition">Masonry</button>
+        </div>
+      </div>
+
+      <div id="projectGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card 1 -->
+        <article class="project-card glass rounded-3xl overflow-hidden tilt">
+          <div class="relative h-48 overflow-hidden">
+            <div class="shine"></div>
+            <div class="cover cover-one absolute inset-0 transition-transform duration-500"></div>
+            <svg class="absolute inset-0" viewBox="0 0 400 200" preserveAspectRatio="none">
+              <circle cx="70" cy="80" r="40" fill="#7dd3fc" opacity=".55"/>
+              <rect x="220" y="40" width="120" height="120" rx="18" fill="#a78bfa" opacity=".45"/>
+              <path d="M0,160 C50,120 120,180 200,150 C260,130 320,180 400,140 L400,200 L0,200 Z" fill="#6ee7b7" opacity=".35"/>
+            </svg>
+          </div>
+          <div class="p-5">
+            <div class="text-sm text-[color:var(--mut)]">Landing Page</div>
+            <h3 class="text-xl font-bold mt-1">Brand Studio</h3>
+            <p class="text-[13px] text-[color:var(--mut)] mt-2">Desain hero kuat dengan CTA yang jelas.</p>
+            <a href="#" class="inline-flex items-center gap-2 mt-3 text-sky-300 hover:text-sky-200">Lihat detail</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card glass rounded-3xl overflow-hidden tilt">
+          <div class="relative h-48 overflow-hidden">
+            <div class="shine"></div>
+            <div class="cover cover-two absolute inset-0 transition-transform duration-500"></div>
+            <svg class="absolute inset-0" viewBox="0 0 400 200" preserveAspectRatio="none">
+              <polygon points="60,160 120,60 180,160" fill="#a78bfa" opacity=".55"/>
+              <circle cx="300" cy="80" r="28" fill="#7dd3fc" opacity=".55"/>
+              <path d="M0,150 Q150,100 260,160 T400,170 L400,200 L0,200 Z" fill="#f59e0b" opacity=".35"/>
+            </svg>
+          </div>
+          <div class="p-5">
+            <div class="text-sm text-[color:var(--mut)]">Dashboard</div>
+            <h3 class="text-xl font-bold mt-1">Analytics Pro</h3>
+            <p class="text-[13px] text-[color:var(--mut)] mt-2">Tampilan data ringkas, fokus pada insight.</p>
+            <a href="#" class="inline-flex items-center gap-2 mt-3 text-sky-300 hover:text-sky-200">Lihat detail</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card glass rounded-3xl overflow-hidden tilt">
+          <div class="relative h-48 overflow-hidden">
+            <div class="shine"></div>
+            <div class="cover cover-three absolute inset-0 transition-transform duration-500"></div>
+            <svg class="absolute inset-0" viewBox="0 0 400 200" preserveAspectRatio="none">
+              <rect x="40" y="40" width="80" height="80" rx="12" fill="#6ee7b7" opacity=".55"/>
+              <polygon points="200,40 260,160 140,160" fill="#7dd3fc" opacity=".45"/>
+              <circle cx="330" cy="150" r="22" fill="#a78bfa" opacity=".45"/>
+            </svg>
+          </div>
+          <div class="p-5">
+            <div class="text-sm text-[color:var(--mut)]">E-commerce</div>
+            <h3 class="text-xl font-bold mt-1">Shopline</h3>
+            <p class="text-[13px] text-[color:var(--mut)] mt-2">Katalog rapi dengan flow checkout singkat.</p>
+            <a href="#" class="inline-flex items-center gap-2 mt-3 text-sky-300 hover:text-sky-200">Lihat detail</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="container-pad py-14 md:py-20">
+    <div class="section-frame mx-auto max-w-7xl">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Keahlian</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass rounded-2xl p-5 tilt">
+          <h3 class="font-semibold pop">Figma</h3>
+          <p class="text-[13px] text-[color:var(--mut)] mt-2 pop">Design system, layout, prototyping.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 tilt">
+          <h3 class="font-semibold pop">HTML/CSS</h3>
+          <p class="text-[13px] text-[color:var(--mut)] mt-2 pop">Responsive, accessibility, animasi.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 tilt">
+          <h3 class="font-semibold pop">JavaScript</h3>
+          <p class="text-[13px] text-[color:var(--mut)] mt-2 pop">Interaksi UI, state, optimasi.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 tilt">
+          <h3 class="font-semibold pop">Performance</h3>
+          <p class="text-[13px] text-[color:var(--mut)] mt-2 pop">LCP/CLS, audit, best practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container-pad py-14 md:py-20">
+    <div class="section-frame mx-auto max-w-7xl relative">
+      <div class="contact-split">
+        <div class="contact-aside">
+          <div class="inline-flex w-fit tag px-3 py-1 rounded-full text-[12px]">Tersedia untuk proyek baru</div>
+          <h2 class="text-3xl md:text-4xl font-extrabold mt-3">Kontak</h2>
+          <p class="text-[15px] text-[color:var(--mut)] mt-3 max-w-md">
+            Punya proyek? Ceritakan kebutuhanmu. Saya balas secepatnya dengan estimasi dan langkah berikutnya.
+          </p>
+          <div class="contact-meta mt-6">
+            <div class="contact-chip">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">halo@portofolio.id</span>
+            </div>
+            <div class="contact-chip">
+              <span class="contact-label">Lokasi</span>
+              <span class="contact-value">Indonesia (Remote)</span>
+            </div>
+          </div>
+          <div class="contact-links mt-6">
+            <a href="#" class="px-3 py-2 rounded-lg border border-white/15" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a href="#" class="px-3 py-2 rounded-lg border border-white/15" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z" fill="currentColor"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a href="#" class="px-3 py-2 rounded-lg border border-white/15" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <rect x="3" y="9" width="4" height="12" fill="currentColor"/>
+                <circle cx="5" cy="5" r="2" fill="currentColor"/>
+                <path d="M10 9h4v2h.1c.6-1.1 2-2.2 4.1-2.2 2.7 0 4.8 1.6 4.8 5.4V21h-4v-6.2c0-1.7-.8-2.7-2.1-2.7-1.3 0-2.2 1-2.2 2.7V21h-4Z" fill="currentColor"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="#" class="px-3 py-2 rounded-lg border border-white/15" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.9 9.5.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.7 1.8-1 .1-.7.4-1.2.7-1.5-2.2-.2-4.5-1.1-4.5-4.8 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .9-.3 2.8 1 1.6-.4 3.2-.4 4.8 0 1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.7-2.3 4.6-4.5 4.8.4.3.7 1 .7 2v3c0 .3.2.6.7.5C19.1 20.2 22 16.4 22 12c0-5.5-4.5-10-10-10Z" fill="currentColor"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <form id="contactForm" class="grid gap-4" action="https://formspree.io/f/myzparnp" method="POST">
+            <div>
+              <label class="block mb-2 text-sm">Nama</label>
+              <input required type="text" name="name" placeholder="Nama lengkap" class="w-full rounded-xl px-4 py-3 bg-white/5 border border-white/10 outline-none focus:bg-white/10"/>
+            </div>
+            <div>
+              <label class="block mb-2 text-sm">Email</label>
+              <input required type="email" name="email" placeholder="nama@email.com" class="w-full rounded-xl px-4 py-3 bg-white/5 border border-white/10 outline-none focus:bg-white/10"/>
+            </div>
+            <div>
+              <label class="block mb-2 text-sm">Pesan</label>
+              <textarea required name="message" rows="4" placeholder="Ceritakan kebutuhan proyekmu..." class="w-full rounded-xl px-4 py-3 bg-white/5 border border-white/10 outline-none focus:bg-white/10"></textarea>
+            </div>
+            <button type="submit" class="btn rounded-xl px-5 py-3 w-fit">Kirim Pesan</button>
+            <p id="formNote" class="text-[13px] text-[color:var(--mut)]"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="container-pad pb-10">
+    <div class="mx-auto max-w-7xl footer-strip">
+      <div class="footer-badge">Available for work</div>
+      <p class="text-[13px] text-[color:var(--mut)]">Portofolio <span id="year"></span>. Semua hak dilindungi.</p>
+      <!-- Social icons removed -->
+    </div>
+  </footer>
+
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

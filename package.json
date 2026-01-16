@@ -1,0 +1,24 @@
+{
+  "name": "webporto",
+  "version": "1.0.0",
+  "description": "Portofolio web modern dengan efek 3D interaktif, animasi halus, dan desain responsif yang elegan.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i assets/css/styles.css -o assets/css/app.css --minify",
+    "watch:css": "npx tailwindcss -i assets/css/styles.css -o assets/css/app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dymasyogaf/web-porto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dymasyogaf/web-porto/issues"
+  },
+  "homepage": "https://github.com/dymasyogaf/web-porto#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman Tidak Ditemukan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="noise">
+  <!-- Floating decorative blobs -->
+  <div class="blob blob-primary pointer-events-none fixed -top-20 -left-10 w-[480px] h-[480px] rounded-full"></div>
+  <div class="blob blob2 blob-accent pointer-events-none fixed bottom-[-80px] right-[-60px] w-[520px] h-[520px] rounded-full"></div>
+
+  <!-- NAV -->
+  <header class="container-pad sticky top-0 z-40">
+    <nav class="max-w-7xl w-full py-4">
+      <div class="glass rounded-2xl px-4 md:px-6 py-3 flex items-center gap-6 w-full">
+        <a href="index.html" class="flex items-center gap-3 no-underline">
+          <span class="logo-badge inline-flex h-9 w-9 rounded-xl items-center justify-center">P</span>
+          <span class="font-semibold tracking-tight">Portofolio</span>
+        </a>
+        <div class="hidden md:flex items-center gap-2 md:ml-auto justify-end">
+          <a href="index.html#about" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Tentang</a>
+          <a href="index.html#projects" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Proyek</a>
+          <a href="index.html#skills" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Keahlian</a>
+          <a href="index.html#contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Kontak</a>
+        </div>
+        <div class="ml-auto md:ml-0 flex items-center gap-2">
+          <button id="mobileMenuBtn" class="md:hidden rounded-xl px-3 py-2 border border-white/15 hover:bg-white/10 transition" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+            <span class="block w-6 h-0.5 bg-white/80 mb-1"></span>
+            <span class="block w-6 h-0.5 bg-white/80 mb-1"></span>
+            <span class="block w-6 h-0.5 bg-white/80"></span>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden mt-3 glass rounded-2xl p-3">
+        <div class="flex flex-col gap-1">
+          <a href="index.html#about" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Tentang</a>
+          <a href="index.html#projects" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Proyek</a>
+          <a href="index.html#skills" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Keahlian</a>
+          <a href="index.html#contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Kontak</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 404 SECTION -->
+  <section class="container-pad flex items-center justify-center min-h-screen">
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="glass rounded-3xl p-8 md:p-12">
+        <h1 class="text-gradient text-6xl md:text-8xl font-extrabold mb-4">404</h1>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Halaman tidak ditemukan</h2>
+        <p class="text-[15px] md:text-base text-[color:var(--mut)] mb-8 max-w-xl mx-auto">
+          Sepertinya halaman yang kamu cari sudah dipindahkan atau tidak tersedia.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="index.html" class="btn rounded-xl px-6 py-3">Kembali ke Beranda</a>
+          <a href="index.html#contact" class="rounded-xl px-6 py-3 border border-white/15 hover:bg-white/10 transition">Hubungi Saya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="container-pad pb-10">
+    <div class="mx-auto max-w-7xl glass rounded-2xl p-5 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p class="text-[13px] text-[color:var(--mut)]">Portofolio <span id="year"></span>. Semua hak dilindungi.</p>
+      <div class="flex items-center gap-2">
+        <a href="#" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">LinkedIn</a>
+        <a href="#" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Behance</a>
+        <a href="#" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
